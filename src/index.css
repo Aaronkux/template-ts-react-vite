@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-item {
+  @apply flex text-gray-600 text-lg rounded-md mx-3 py-1 px-2 hover:bg-current hover:text-white transition-colors cursor-pointer;
+}
+.nav-item-active {
+  @apply flex text-white bg-current hover:bg-current hover:text-white text-lg rounded-md mx-3 py-1 px-2 transition-colors cursor-pointer;
+}
+
+.dropdown-item {
+  @apply flex px-12 py-2 mt-2 items-center grow font-bold text-gray-600 rounded-md mx-3 hover:bg-current hover:text-white transition-colors cursor-pointer;
+}
+.dropdown-item-active {
+  @apply flex px-12 py-2 mt-2 items-center grow font-bold text-white bg-current hover:bg-current rounded-md mx-3 hover:text-white transition-colors cursor-pointer;
+}
+
+.navbar-item {
+  @apply font-semibold block text-lg transition-colors cursor-pointer leading-[4rem] px-4 text-gray-400 border-b-2 border-transparent;
+}
+
+.navbar-item-active {
+  @apply font-semibold block text-lg transition-colors cursor-pointer leading-[4rem] px-4 text-current border-b-2 border-current;
+}
+
+.pageSwitch-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.pageSwitch-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.pageSwitch-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.pageSwitch-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.pageSwitch-enter-active,
+.pageSwitch-exit-active {
+  transition: opacity 400ms, transform 400ms;
+}

@@ -1,0 +1,101 @@
+.input-field-text-style {
+  color: #818181;
+  font-weight: 600;
+}
+
+.ant-form-item-label {
+  padding-bottom: 1px !important;
+}
+
+.ant-input {
+  border: none !important;
+  background-color: transparent !important;
+  caret-color: @field-border-color;
+  .input-field-text-style;
+  &:focus {
+    border: none !important;
+    border-bottom: 2px solid @field-border-color !important;
+    box-shadow: none !important;
+  }
+  border-bottom: 2px solid @field-border-color !important;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid @field-border-color !important;
+  background-color: transparent !important;
+}
+
+.ant-select-selection-item {
+  .input-field-text-style;
+}
+.ant-select-dropdown {
+  padding: 0;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #fff;
+}
+
+.ant-select-item-option-content {
+  font-weight: 600;
+}
+
+.ant-select-item-option-active {
+  background-color: @field-border-color !important;
+  color: #fff !important;
+}
+
+.ant-select-arrow {
+  color: @field-border-color;
+  transform: scale(1.3);
+}
+
+.ant-form-item-label > label {
+  color: #595758;
+}
+
+.ant-btn-primary {
+  background-color: @primary-color !important;
+}
+.ant-btn-primary:hover {
+  background-color: @primary-color-hover !important;
+}
+
+.ant-picker {
+  width: 100%;
+  border: none !important;
+  border-bottom: 2px solid @field-border-color !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+
+  &-input > input {
+    .input-field-text-style;
+  }
+}
+
+.ant-picker-suffix {
+  color: @field-border-color;
+}
+
+a:hover {
+  color: @primary-color;
+  background-color: transparent;
+}
+
+.ant-input-number {
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid @field-border-color !important;
+  background-color: transparent !important;
+  width: 100%;
+}
+
+.ant-input-number-handler-wrap {
+  display: none;
+}

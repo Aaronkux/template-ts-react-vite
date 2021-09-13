@@ -1,0 +1,221 @@
+import requestAPI from '@/utils/request';
+
+export interface ContactServiceData {
+  Id?: string;
+  LastName?: string;
+  FirstName?: string;
+  MiddleName?: string;
+  BillingStreet?: null;
+  BillingCity?: null;
+  BillingState?: null;
+  BillingPostalCode?: null;
+  BillingCountry?: null;
+  BillingLatitude?: null;
+  BillingLongitude?: null;
+  BillingGeocodeAccuracy?: null;
+  BillingAddress?: null;
+  ShippingStreet?: null;
+  ShippingCity?: null;
+  ShippingState?: null;
+  ShippingPostalCode?: null;
+  ShippingCountry?: null;
+  ShippingLatitude?: null;
+  ShippingLongitude?: null;
+  ShippingGeocodeAccuracy?: null;
+  ShippingAddress?: null;
+  Phone?: null;
+  Fax?: null;
+  AccountNumber?: null;
+  Website?: null;
+  Sic?: null;
+  Industry?: null;
+  AnnualRevenue?: null;
+  NumberOfEmployees?: null;
+  Ownership?: null;
+  TickerSymbol?: null;
+  Description?: null;
+  Rating?: 'Warm';
+  Site?: null;
+  IsPersonAccount?: true;
+  PersonMailingStreet?: null;
+  PersonMailingCity?: null;
+  PersonMailingState?: null;
+  PersonMailingPostalCode?: null;
+  PersonMailingCountry?: null;
+  PersonMailingLatitude?: null;
+  PersonMailingLongitude?: null;
+  PersonMailingGeocodeAccuracy?: null;
+  PersonMailingAddress?: null;
+  PersonMobilePhone?: '0400000000';
+  PersonEmail?: 'abc@aaa.com';
+  PersonTitle?: null;
+  PersonDepartment?: null;
+  PersonLastCURequestDate?: null;
+  PersonLastCUUpdateDate?: null;
+  PersonEmailBouncedReason?: null;
+  PersonEmailBouncedDate?: null;
+  PersonIndividualId?: null;
+  Jigsaw?: null;
+  JigsawCompanyId?: null;
+  AccountSource?: 'Friend';
+  SicDesc?: null;
+  A_ABN__c?: null;
+  A_Account_Site__c?: null;
+  A_Aggregator__c?: null;
+  A_Applicant_Type__c?: null;
+  A_Branch__c?: 'Adelaide';
+  A_Credit_Rep__c?: null;
+  A_Employee_Type__c?: null;
+  A_Entity_Type__c?: 'Individual';
+  A_From_Web__c?: 0;
+  A_GST_Registration__c?: null;
+  A_GST_Status__c?: null;
+  A_Legal_Name__c?: null;
+  A_Marital_Status__c?: 'Married';
+  A_Number_of_Dependents__c?: null;
+  A_Permanent_in_Australia__c?: null;
+  A_Primary_Applicant__c?: null;
+  A_Rating__c?: null;
+  A_Residential_Status__c?: null;
+  A_Web__c?: null;
+  Account_No__c?: 'Acc-32510';
+  Account_Primary__c?: null;
+  Company__c?: null;
+  DOB__c?: '2020-03-03';
+  Gender__c?: null;
+  Permanent_Australian_Resident__c?: null;
+  Residency_Status__c?: 'Permanent Resident';
+  Visa__c?: 'ASD123214';
+  Country_of_Residency__c?: 'Australia';
+  Account_Type__c?: null;
+  Candidate_Source__c?: null;
+  Candidate_Status__c?: null;
+  Candidate_Comments__c?: null;
+  Candidate_Assigned_Branch__c?: null;
+  Candidate_Role__c?: null;
+  Dependent_Ages__c?: null;
+  Interested_In__c?: null;
+  Number__c?: 'A124214';
+  Expiry__c?: '2021-10-06';
+  State__c?: 'NSW';
+  Ownership__c?: null;
+  Company_Type__c?: null;
+  Fact_Find__c?: null;
+  Relative_or_Close_Friend_Name__c?: null;
+  Interview_Time__c?: null;
+  Preferred_Name__c?: 'Lion';
+  Mother_s_maiden_name_Citi_ING_AAA__c?: null;
+  Relative_details_for_NAB__c?: null;
+  Relative_or_Close_Friend_relationship__c?: null;
+  Relative_or_Close_Friend_Address__c?: null;
+  Relative_or_Close_Friend_Contact__c?: null;
+  After_Onboard_Feedback__c?: null;
+  Second_Month_Training_Feedback__c?: null;
+  Country_Citizenship_Status__c?: null;
+  Tax_Identification_Number__c?: 'ASF124214';
+  Full_name_of_spouse__c?: 'Unknown';
+  Plan_to_Bring_Things_Up_to_Date__c?: null;
+  A_Mercury_Contact_Method_Unique_ID__c?: null;
+  A_Mercury_Related_Parties_Unique_ID__c?: null;
+  A_Mercury_Unique_ID__c?: null;
+  License_Class__c?: 'Full License';
+  Training_Feedback__c?: null;
+  dupcheck__dc3DisableDuplicateCheck__c?: false;
+  dupcheck__dc3Index__c?: null;
+  Training_Status__c?: null;
+  Pre_Training_Exam_Score__c?: null;
+  First_Home__c?: null;
+  Are_You_Tax_Resident_of_Foreign_Country__c?: 'No';
+  Financial_Judgment_or_Legal_Proceedings__c?: null;
+  Provide_Details__c?: null;
+  Credit_Finance_Commitment_Up_to_Date__c?: null;
+  Future_Changes_to_Business_Income__c?: null;
+  SFSSDupeCatcher__Override_DupeCatcher__c?: false;
+  Birthday_This_Year__c?: '2022-03-03';
+  This_Birthday__c?: '2021-03-03';
+  Blacklist__c?: false;
+  Relative_Name__c?: null;
+  Unsubscribe__c?: false;
+  Passport_No__c?: 'EE6276593';
+  Passport_Expiry_Date__c?: '2021-10-30';
+  Passport_Issued_Date__c?: '2021-10-01';
+  Place_of_Issue__c?: 'China';
+  New_Email__c?: 'abc@aaa.com';
+  tdc_tua__Optout_Feedback__c?: null;
+  tdc_tua__Unsubscribed__c?: false;
+  Reset_Birthday_Email_System__c?: false;
+  Receive_Birthday_Emails__c?: false;
+  Next_Birthday__c?: null;
+  PC_Number__c?: 'B214214';
+  Photo_Card_Number__c?: '23532532';
+  Photo_Card_Expiry_Date__c?: '2021-10-08';
+  Medicare_Card_Number__c?: '92640863425';
+  Medicare_Expiry_Date__c?: '2021-10-14';
+  PC_State_Issued__c?: 'NSW';
+  Language__pc?: 'Chinese';
+  Dependent_Ages__pc?: null;
+  Permanent_Australian_Resident__pc?: 'Yes';
+  SFSSDupeCatcher__Override_DupeCatcher__pc?: false;
+  rh2__Currency_Test__pc?: null;
+  rh2__Describe__pc?: null;
+  rh2__Formula_Test__pc?: 0;
+  dupcheck__dc3DisableDuplicateCheck__pc?: false;
+  dupcheck__dc3Index__pc?: null;
+  rh2__Integer_Test__pc?: null;
+  DOB__pc?: '2020-03-03';
+  Preferred_Name__pc?: 'Lion';
+  First_Home__pc?: null;
+  Country_of_Residency__pc?: 'Australia';
+  Visa__pc?: 'ASD123214';
+  Marital_Status__pc?: 'Married';
+  Number_of_Dependents__pc?: '0';
+  Mother_s_Maiden_Name__pc?: null;
+  Number__pc?: 'A124214';
+  State__pc?: 'NSW';
+  Expiry__pc?: '2021-10-06';
+  Relative_or_Close_Friend_Name__pc?: null;
+  Relative_or_Close_Friend_Relationship__pc?: null;
+  Relative_or_Close_Friend_Address__pc?: null;
+  Relative_or_Close_Friend_Contact__pc?: null;
+  Are_You_Tax_Resident_of_Foreign_Country__pc?: 'No';
+  Country_Citizenship_Status__pc?: null;
+  Financial_Judgment_or_Legal_Proceeding__pc?: null;
+  Provide_Details__pc?: null;
+  Credit_Finance_Commitment_Up_to_Date__pc?: null;
+  Plan_to_Bring_Things_Up_to_Date__pc?: null;
+  Relative_name__pc?: null;
+  Gender__pc?: null;
+  Passport_Number__pc?: 'EE6276593';
+  Residency_Status__pc?: 'Permanent Resident';
+  Full_Name_of_Spouse__pc?: 'Unknown';
+  tdc_tua__Email_Subscribe__pc?: false;
+  tdc_tua__Optout_Feedback__pc?: null;
+  tdc_tua__Unsubscribe__pc?: false;
+  Reset_Birthday_Email_System__pc?: false;
+  Receive_Birthday_Emails__pc?: true;
+  Next_Birthday__pc?: null;
+}
+export async function getContactService(id: string) {
+  const res = await requestAPI<ContactServiceData>({
+    url: `/contact/${id}`,
+    method: 'get',
+  });
+  return res.data;
+}
+
+export interface UpdateContactServiceParams {
+  id: string;
+  data: any;
+}
+
+export async function updateContactService({
+  id,
+  data,
+}: UpdateContactServiceParams) {
+  const res = await requestAPI<null>({
+    url: `/contact/${id}`,
+    method: 'put',
+    data,
+  });
+  return res.data;
+}
